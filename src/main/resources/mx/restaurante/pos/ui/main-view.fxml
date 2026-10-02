@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.restaurante.pos.ui.MainController" styleClass="app-shell">
+    <left>
+        <VBox spacing="6" prefWidth="226" styleClass="sidebar">
+            <padding><Insets top="22" right="15" bottom="18" left="15"/></padding>
+            <Label text="MESA Y MIGA" styleClass="brand" />
+            <Label text="PUNTO DE VENTA" styleClass="brand-caption" />
+            <Label text="OPERACIÓN" styleClass="section-caption" />
+            <Button text="◫   Salón y mesas" onAction="#showTables" styleClass="nav-button" />
+            <Button text="▤   Comandas / cocina" onAction="#showKitchen" styleClass="nav-button" />
+            <Button text="＄   Ventas y cobro" onAction="#showSales" styleClass="nav-button" />
+            <Label text="CATÁLOGO Y CONTROL" styleClass="section-caption" />
+            <Button text="▦   Productos" onAction="#showProducts" styleClass="nav-button" />
+            <Button text="◈   Categorías" onAction="#showCategories" styleClass="nav-button" />
+            <Button text="♧   Proveedores" onAction="#showSuppliers" styleClass="nav-button" />
+            <Button text="▥   Inventario" onAction="#showInventory" styleClass="nav-button" />
+            <Button text="♨   Recetas e insumos" onAction="#showRecipes" styleClass="nav-button" />
+            <Label text="ADMINISTRACIÓN" styleClass="section-caption" />
+            <Button text="٪   Impuestos" onAction="#showTaxes" styleClass="nav-button" />
+            <Button text="↩   Devoluciones" onAction="#showReturns" styleClass="nav-button" />
+            <Button text="▧   Reportes TXT" onAction="#showReports" styleClass="nav-button" />
+            <Button text="◷   Cortes X / Z" onAction="#showClosures" styleClass="nav-button" />
+            <VBox VBox.vgrow="ALWAYS" />
+            <Label text="Datos locales · archivos TXT" styleClass="sidebar-footer" />
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="0" styleClass="main-area">
+            <HBox alignment="CENTER_LEFT" styleClass="topbar" spacing="12">
+                <padding><Insets top="15" right="28" bottom="15" left="28"/></padding>
+                <Label text="POS Restaurante" styleClass="topbar-title" />
+                <VBox HBox.hgrow="ALWAYS" />
+                <Label text="Turno de servicio" styleClass="muted" />
+                <Label text="● Abierto" styleClass="status-open" />
+            </HBox>
+            <VBox fx:id="content" spacing="18" VBox.vgrow="ALWAYS" styleClass="content-area">
+                <padding><Insets top="26" right="30" bottom="30" left="30"/></padding>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>
